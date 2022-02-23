@@ -347,6 +347,10 @@ public:
   DEF_INT(qa_mode_mock_public_cloud_vid, "1", "[1,102400]", "mock public cloud vid", CFG_NO_NEED_REBOOT, CFG_SECTION_OBPROXY, CFG_VISIBLE_LEVEL_USER);
   DEF_STR(proxy_route_policy, "", "proxy route policy", CFG_NO_NEED_REBOOT, CFG_SECTION_OBPROXY, CFG_VISIBLE_LEVEL_SYS);
 
+  // add for weak read 
+  DEF_BOOL(force_ob_read_consistency_weak, "false", "force enable user to read weak with obproxy"", CFG_NO_NEED_REBOOT, CFG_SECTION_OBPROXY, CFG_VISIBLE_LEVEL_USER);
+  // add end
+
   DEF_STR(mysql_version, "5.6.25", "returned version for mysql mode, default value is 5.6.25. If set, proxy will send new version when user connect to proxy", CFG_NO_NEED_REBOOT, CFG_SECTION_OBPROXY, CFG_VISIBLE_LEVEL_USER)
   // sql table cache
   DEF_BOOL(enable_index_route, "false", "enable index route or not", CFG_NO_NEED_REBOOT, CFG_SECTION_OBPROXY, CFG_VISIBLE_LEVEL_USER);

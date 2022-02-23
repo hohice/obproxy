@@ -342,6 +342,12 @@ int ObMysqlClientSession::new_connection(
             }
           }
 
+          // add for force read weak
+          if (is_force_ob_read_consistency_weak()){
+            session_info_.set_is_force_read_weak(is_force_ob_read_consistency_weak());
+          }
+          // add end
+
           // 2. handle_new_connection no matter convert vip to tenant result.
           handle_new_connection();
         }
@@ -1427,6 +1433,13 @@ bool ObMysqlClientSession::is_need_convert_vip_to_tname()
 {
   return (get_global_proxy_config().need_convert_vip_to_tname && !this->is_proxy_mysql_client_ );
 }
+
+// add for get ob_read_consistency
+bool ObMysqlClientSession::is_force_ob_read_consistency_weak()
+{
+  return get_global_proxy_config().force_ob_read_consistency_weak;
+}
+// add end
 
 bool ObMysqlClientSession::is_need_use_proxy_tenant_name()
 {

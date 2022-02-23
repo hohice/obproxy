@@ -1197,6 +1197,21 @@ int ObProxySessionInfoHandler::save_changed_session_info(ObClientSessionInfo &cl
     }
   }
 
+  // add for default ob_read_consistency
+  if (OB_SUCC(ret)) {
+    if(client_info_.is_force_read_weak()){
+      ObString ob_read_consistency("ob_read_consistency");
+      // 2 means WEAK for ob_read_consistency
+      ObString weak("2");
+      if (OB_FAIL(client_info.update_sys_variable(ob_read_consistency, weak))) {
+        LOG_WARN("replace user variables failed", K(ret));
+      } else {
+        client_info.set_read_consistency_set_flag(true);
+      }
+    }
+  }
+  // add end
+
   return ret;
 }
 

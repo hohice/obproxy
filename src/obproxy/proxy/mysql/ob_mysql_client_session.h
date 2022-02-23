@@ -130,6 +130,10 @@ public:
   // for cloud user, proxy start with proxy_tenant and cluster name
   bool is_need_use_proxy_tenant_name();
 
+  // add for get ob_read_consistency
+  int is_force_ob_read_consistency_weak();
+  // add end
+
   int64_t get_current_tid() const { return current_tid_; }
 
   uint32_t &get_cs_id_ref() { return cs_id_; }

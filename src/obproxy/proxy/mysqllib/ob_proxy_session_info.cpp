@@ -197,7 +197,7 @@ int64_t ObClientSessionInfo::to_string(char *buf, const int64_t buf_len) const
        K_(is_read_consistency_set), K_(idc_name), K_(cluster_id), K_(real_meta_cluster_name),
        K_(safe_read_snapshot), K_(syncing_safe_read_snapshot), K_(route_policy),
        K_(proxy_route_policy), K_(user_identity), K_(global_vars_version),
-       K_(is_read_only_user), K_(is_request_follower_user));
+       K_(is_read_only_user), K_(is_request_follower_user),K_(is_force_read_weak));
   J_OBJ_END();
   return pos;
 }

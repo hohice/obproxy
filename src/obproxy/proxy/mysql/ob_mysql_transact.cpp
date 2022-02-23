@@ -5286,6 +5286,8 @@ bool ObMysqlTransact::is_internal_request(ObTransState &s)
           || (get_client_session_info(s).is_read_only_user()
               && s.trans_info_.client_request_.get_parse_result().is_set_tx_read_only())
           || (get_client_session_info(s).is_request_follower_user()
+              &&s.trans_info_.client_request_.get_parse_result().is_set_ob_read_consistency())
+          || (get_client_session_info(s).is_force_read_weak()
               &&s.trans_info_.client_request_.get_parse_result().is_set_ob_read_consistency());
 }
 
