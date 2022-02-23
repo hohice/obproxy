@@ -810,7 +810,7 @@ public:
   {
     is_read_only_user_ = is_read_only_user;
   }
-  void set_is_request_follower_user(bool )
+  void set_is_request_follower_user(bool set_is_request_follower_user)
   {
     is_request_follower_user_ = is_request_follower_user;
   }
@@ -819,7 +819,7 @@ public:
   bool is_request_follower_user() const { return is_request_follower_user_; }
 
 // add for force read weak
-  bool is_force_read_weak() const(return is_force_read_weak_;)
+  bool is_force_read_weak() const {return is_force_read_weak_;}
   void set_is_force_read_weak(bool is_force_read_weak) {
     is_force_read_weak_ = is_force_read_weak;
   }

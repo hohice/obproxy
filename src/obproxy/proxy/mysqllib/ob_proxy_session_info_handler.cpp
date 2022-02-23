@@ -1199,7 +1199,7 @@ int ObProxySessionInfoHandler::save_changed_session_info(ObClientSessionInfo &cl
 
   // add for default ob_read_consistency
   if (OB_SUCC(ret)) {
-    if(client_info_.is_force_read_weak()){
+    if(client_info.is_force_read_weak()){
       ObString ob_read_consistency("ob_read_consistency");
       // 2 means WEAK for ob_read_consistency
       ObString weak("2");

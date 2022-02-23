@@ -348,7 +348,7 @@ public:
   DEF_STR(proxy_route_policy, "", "proxy route policy", CFG_NO_NEED_REBOOT, CFG_SECTION_OBPROXY, CFG_VISIBLE_LEVEL_SYS);
 
   // add for weak read 
-  DEF_BOOL(force_ob_read_consistency_weak, "false", "force enable user to read weak with obproxy"", CFG_NO_NEED_REBOOT, CFG_SECTION_OBPROXY, CFG_VISIBLE_LEVEL_USER);
+  DEF_BOOL(force_ob_read_consistency_weak, "false", "force enable user to read weak with obproxy", CFG_NO_NEED_REBOOT, CFG_SECTION_OBPROXY, CFG_VISIBLE_LEVEL_USER);
   // add end
 
   DEF_STR(mysql_version, "5.6.25", "returned version for mysql mode, default value is 5.6.25. If set, proxy will send new version when user connect to proxy", CFG_NO_NEED_REBOOT, CFG_SECTION_OBPROXY, CFG_VISIBLE_LEVEL_USER)
