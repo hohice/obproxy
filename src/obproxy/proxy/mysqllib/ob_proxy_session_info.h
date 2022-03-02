@@ -810,7 +810,7 @@ public:
   {
     is_read_only_user_ = is_read_only_user;
   }
-  void set_is_request_follower_user(bool set_is_request_follower_user)
+  void set_is_request_follower_user(bool is_request_follower_user)
   {
     is_request_follower_user_ = is_request_follower_user;
   }
